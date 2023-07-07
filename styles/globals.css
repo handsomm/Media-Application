@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* > * {
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: whitesmoke;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+  
+  ::-webkit-scrollbar-track {
+    background: #13152D;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+
+.sidebar {
+    width: 17rem;
+    height: 100%;
+    background-color: white;
+    padding: 1rem;
+    transition: all .1s linear;
+}
+
+.sidebar__top {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.sidebar__logo {
+    width: 3.5rem;
+    height: 3.5rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.sidebar__list {
+    list-style: none;
+}
+
+.sidebar__link {
+    display: flex;
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+    padding: 0.8rem 1rem;
+    background-color: #f3f4f6;
+    margin-bottom: 1rem;
+    border-radius: 0.8rem;
+    align-items: center;
+}
+
+.sidebar__icon {
+    font-size: 1.2rem;
+    display: inline-block;
+    margin-right: 0.6rem;
+}
+
+.sidebar__logo_name {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.layout {
+    display: flex;
+    height: 100vh;
+    /* position: relative; */
+    gap: 1rem;
+}
+
+.btn {
+    position: absolute;
+    right: 0;
+    top: 4.4rem;
+    border: none;
+    background-color: wheat;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(50%);
+    font-size: 1.1rem;
+}
+
+.sidebar__wrapper {
+    position: relative;
+}
+
+[data-collapsed = 'true'] {
+    width: 5.3rem;
+}
+[data-collapsed = 'true'] .sidebar__name, 
+[data-collapsed = 'true'] .sidebar__logo_name {
+    display: none;
+}
+
